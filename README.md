@@ -1,0 +1,2 @@
+# oozie-dir
+oozie setup
