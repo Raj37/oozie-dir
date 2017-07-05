@@ -1,0 +1,35 @@
+Run Oozie workflow:-
+ 
+[cloudera@localhost ~]$ oozie job -oozie http://localhost:11000/oozie -config job.properties -run
+
+Check Running status using job id:-
+Lets job id is:-
+job: 0000000-160525112824113-oozie-oozi-W
+
+[cloudera@localhost ~]$ oozie job -oozie http://localhost:11000/oozie -info 0000000-160525112824113-oozie-oozi-W
+
+output wil be like:-
+Job ID : 0000000-160525112824113-oozie-oozi-W
+------------------------------------------------------------------------------------------------------------------------------------
+Workflow Name : WorkFlowJavaMapReduceAction
+App Path      : /user/cloudera/Oozie/MapreduceWf
+Status        : SUCCEEDED
+Run           : 0
+User          : cloudera
+Group         : -
+Created       : 2016-05-25 19:29 GMT
+Started       : 2016-05-25 19:29 GMT
+Last Modified : 2016-05-25 19:32 GMT
+Ended         : 2016-05-25 19:32 GMT
+CoordAction ID: -
+
+Actions
+------------------------------------------------------------------------------------------------------------------------------------
+ID                                                                            Status    Ext ID                 Ext Status Err Code  
+------------------------------------------------------------------------------------------------------------------------------------
+0000000-160525112824113-oozie-oozi-W@:start:                                  OK        -                      OK         -         
+------------------------------------------------------------------------------------------------------------------------------------
+0000000-160525112824113-oozie-oozi-W@mapReduceAction                          OK        job_201605250947_0002  SUCCEEDED  -         
+------------------------------------------------------------------------------------------------------------------------------------
+0000000-160525112824113-oozie-oozi-W@end                                      OK        -                      OK         -         
+------------------------------------------------------------------------------------------------------------------------------------
